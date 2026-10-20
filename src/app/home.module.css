@@ -1,0 +1,153 @@
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  /* Fill the screen exactly below the sticky header (+1px border); svh = visible height on mobile */
+  min-height: calc(100vh - var(--header-h) - 1px);
+  min-height: calc(100svh - var(--header-h) - 1px);
+  padding-block: 2rem clamp(2.5rem, 2rem + 4vh, 5rem);
+  color: var(--on-dark);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+.heroMedia {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.heroMedia picture,
+.heroImg {
+  width: 100%;
+  height: 100%;
+}
+
+.heroImg {
+  object-fit: cover;
+  object-position: 50% 62%;
+}
+
+.heroMedia::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(40, 22, 14, 0.86) 0%, rgba(40, 22, 14, 0.55) 38%, rgba(40, 22, 14, 0.12) 72%),
+    linear-gradient(to right, rgba(40, 22, 14, 0.45), rgba(40, 22, 14, 0) 60%);
+}
+
+.heroInner {
+  position: relative;
+}
+
+.heroCopy {
+  max-width: 40rem;
+}
+
+.heroTitle {
+  font-size: var(--fs-display);
+  color: var(--on-dark);
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 0.3em;
+}
+
+.heroLead {
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+  color: var(--on-dark);
+  max-width: 34rem;
+}
+
+/* ---------- About ---------- */
+.badges {
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.aboutImg {
+  aspect-ratio: 4 / 3;
+}
+
+/* ---------- Founder ---------- */
+.founderQuote {
+  margin: 0 0 1rem;
+}
+
+.founderQuote p {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 1.25rem + 1.5vw, 2.45rem);
+  line-height: 1.25;
+  color: var(--on-dark);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.founderName {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--on-dark-link);
+  margin-bottom: 1.5rem;
+}
+
+.founderImg {
+  max-width: 460px;
+  justify-self: end;
+  width: 100%;
+}
+
+@media (max-width: 879px) {
+  .founderImg {
+    justify-self: start;
+    max-width: 240px;
+    order: -1;
+  }
+}
+
+/* ---------- Moments ---------- */
+.momentsHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  margin-bottom: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+
+.momentsHead h2 {
+  margin: 0;
+}
+
+.moments {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(0.75rem, 0.5rem + 1vw, 1.5rem);
+}
+
+@media (min-width: 700px) {
+  .moments {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.moments :global(.media) {
+  aspect-ratio: 3 / 4;
+}
+
+.moments figcaption {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Interface text: logo-matched face */
+.founderName,
+.moments figcaption {
+  font-family: var(--font-ui);
+}

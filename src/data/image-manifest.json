@@ -1,0 +1,311 @@
+{
+ "shala-mandala": {
+  "src": "2024/08/mandala-1.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "shala-pavilion-class": {
+  "src": "2024/08/udana-yoga-shala-KSR.webp",
+  "width": 1600,
+  "height": 899,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "graduation-certificates": {
+  "src": "2024/08/YTTC-udana.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "graduation-celebration": {
+  "src": "2024/08/Udana-YTTC.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "mandala-ceremony": {
+  "src": "2024/08/YTTC-2.webp",
+  "width": 800,
+  "height": 1000,
+  "widths": [
+   480,
+   800
+  ]
+ },
+ "studio-ceremony-circle": {
+  "src": "2024/07/yoda-udana.webp",
+  "width": 1600,
+  "height": 1067,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "studio-students": {
+  "src": "2024/08/Yoga-Class.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "studio-backbend-class": {
+  "src": "2024/07/galle-3.webp",
+  "width": 1440,
+  "height": 1440,
+  "widths": [
+   480,
+   800,
+   1200,
+   1440
+  ]
+ },
+ "studio-group-yellow": {
+  "src": "2024/07/gale-4.webp",
+  "width": 1280,
+  "height": 960,
+  "widths": [
+   480,
+   800,
+   1280
+  ]
+ },
+ "graduates-seaside": {
+  "src": "2024/07/gale-5.webp",
+  "width": 1125,
+  "height": 828,
+  "widths": [
+   480,
+   800,
+   1125
+  ]
+ },
+ "aerial-studio": {
+  "src": "2024/07/gale-1.webp",
+  "width": 899,
+  "height": 899,
+  "widths": [
+   480,
+   899
+  ]
+ },
+ "aerial-class": {
+  "src": "2025/02/aerial-yoga-pic-1.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "aerial-hammocks": {
+  "src": "2025/02/aerial-yoga-pic-2.webp",
+  "width": 1440,
+  "height": 1440,
+  "widths": [
+   480,
+   800,
+   1200,
+   1440
+  ]
+ },
+ "aerial-mandala-circle": {
+  "src": "2025/02/aerial-yoga-pics-4.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "side-stretch-assist": {
+  "src": "2024/08/workshop-udana.webp",
+  "width": 1600,
+  "height": 1064,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "headstand-assist": {
+  "src": "2024/08/udana-yoga-putu.jpg",
+  "width": 643,
+  "height": 934,
+  "widths": [
+   480,
+   643
+  ]
+ },
+ "ceremony-sashes": {
+  "src": "2024/08/Workshop-bg-2-2.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "temple-prayer": {
+  "src": "2024/08/praying-temple.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "melukat-blessing": {
+  "src": "2024/08/melukat-2-2.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "melukat-spring": {
+  "src": "2024/08/Melukat-1.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "water-temple": {
+  "src": "2024/07/gale-2.webp",
+  "width": 1000,
+  "height": 700,
+  "widths": [
+   480,
+   800,
+   1000
+  ]
+ },
+ "canang-sari": {
+  "src": "2024/08/Canang-Sari.webp",
+  "width": 1600,
+  "height": 900,
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ "balinese-food": {
+  "src": "2024/07/udanas-food.webp",
+  "width": 1280,
+  "height": 1280,
+  "widths": [
+   480,
+   800,
+   1280
+  ]
+ },
+ "putu-dwijendra": {
+  "src": "2024/08/Pak-Putu-Udana.webp",
+  "width": 600,
+  "height": 600,
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "putu-dwijendra-seated": {
+  "src": "2024/08/Pak-Putu-Dwijendra.webp",
+  "width": 669,
+  "height": 655,
+  "widths": [
+   480,
+   669
+  ]
+ },
+ "tomoko": {
+  "src": "2024/08/Tomoko-Udana.webp",
+  "width": 600,
+  "height": 600,
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "badge-rys-200": {
+  "src": "2024/08/Rys-200-1.webp",
+  "width": 196,
+  "height": 196,
+  "widths": [
+   196
+  ],
+  "single": true
+ },
+ "badge-yacep": {
+  "src": "2024/08/B5DABCAC-1262-442C-B88F-6FCE71631382_4_5005_c.jpeg",
+  "width": 196,
+  "height": 196,
+  "widths": [
+   196
+  ],
+  "single": true
+ },
+ "badge-yoga-alliance": {
+  "src": "2024/08/B8572940-2AFD-40CA-BD7E-513361E73216_4_5005_c.jpeg",
+  "width": 196,
+  "height": 196,
+  "widths": [
+   196
+  ],
+  "single": true
+ },
+ "logo-brown": {
+  "src": "2024/06/Udana-yoga-Logo-asli.webp",
+  "width": 320,
+  "height": 197,
+  "single": true
+ },
+ "logo-white-academy": {
+  "src": "2024/08/Udana-yoga-Logo-asli-footer.webp",
+  "width": 360,
+  "height": 251,
+  "single": true
+ }
+}

@@ -1,0 +1,23 @@
+.band {
+  position: relative;
+  height: clamp(220px, 34vw, 460px);
+  overflow: hidden;
+  background: var(--sand);
+}
+
+.bandInner {
+  position: absolute;
+  inset: -8% 0;
+}
+
+.bandInner picture {
+  width: 100%;
+  height: 100%;
+}
+
+.bandImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+}

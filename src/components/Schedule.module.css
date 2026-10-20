@@ -1,0 +1,87 @@
+.schedule {
+  max-width: 100%;
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  gap: 2.25rem 4rem;
+}
+
+@media (min-width: 820px) {
+  .grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.title {
+  font-size: var(--fs-h3);
+  margin-bottom: 0.75rem;
+}
+
+.dates {
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+  margin-bottom: 1.5rem;
+}
+
+.dates li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.range {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 1.04rem + 0.3vw, 1.3rem);
+  font-weight: 600;
+  color: var(--brown);
+  font-variant-numeric: lining-nums;
+}
+
+.empty {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-small);
+}
+
+.meta {
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  font-size: var(--fs-small);
+}
+
+.meta dt {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
+.meta dd {
+  margin: 0;
+}
+
+.priceNote {
+  margin-top: 0.85rem;
+  font-size: var(--fs-xs);
+  color: var(--ink-soft);
+}
+
+.disclaimer {
+  margin-top: 2rem;
+  font-size: var(--fs-xs);
+  color: var(--ink-soft);
+  max-width: 44rem;
+}
+
+/* Interface text: logo-matched face */
+.meta dt,
+.empty a {
+  font-family: var(--font-ui);
+}

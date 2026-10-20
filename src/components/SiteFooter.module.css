@@ -1,0 +1,184 @@
+.footer {
+  background: var(--brown-deep);
+  color: var(--on-dark-soft);
+  padding-top: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.footer a {
+  color: var(--on-dark);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--on-dark-link);
+  text-decoration: underline;
+}
+
+.footer :focus-visible {
+  outline-color: var(--on-dark-link);
+}
+
+/* ---------- Layout ---------- */
+.grid {
+  display: grid;
+  gap: 1.1rem 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.brand {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) and (max-width: 979px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .grid {
+    grid-template-columns: 1.6fr 1fr 1fr 0.8fr;
+    gap: 1.5rem 2.5rem;
+  }
+  .brand {
+    grid-column: auto;
+    align-items: flex-start;
+  }
+}
+
+.logo {
+  flex: none;
+  width: 84px;
+  height: auto;
+}
+
+.contact {
+  min-width: 0;
+}
+
+.address {
+  font-style: normal;
+  margin-bottom: 0.35rem;
+  max-width: 20rem;
+}
+
+.contactLines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  margin: 0;
+}
+
+.contactLines a {
+  color: var(--on-dark-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contactLines a:hover {
+  color: var(--on-dark);
+}
+
+/* ---------- Link columns ---------- */
+.heading {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--on-dark-link);
+  margin: 0 0 0.35rem;
+}
+
+.col ul {
+  list-style: none;
+  display: grid;
+}
+
+.col a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
+
+/* On phones the Academy links sit on one wrapped row */
+@media (max-width: 639px) {
+  .inline {
+    grid-column: 1 / -1;
+  }
+  .inline ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+  }
+  .inline .heading {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .grid {
+    gap: 0.9rem 1.25rem;
+  }
+  .logo {
+    width: 68px;
+  }
+  .col a,
+  .social a {
+    min-height: 26px;
+  }
+}
+
+/* ---------- Bottom bar ---------- */
+.bottom {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+  margin-top: 1.1rem;
+  padding-block: 0.6rem 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.bottom p {
+  margin: 0;
+}
+
+.bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--gutter);
+  right: var(--gutter);
+  height: 1px;
+  background: rgba(243, 217, 207, 0.25);
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
+
+/* Interface text: logo-matched face */
+.col a,
+.contactLines a,
+.bottom {
+  font-family: var(--font-ui);
+}

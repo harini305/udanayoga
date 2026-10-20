@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# logs & env
+npm-debug.log*
+*.log
+.env*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Phase 1 audit evidence stays local: it holds the unpublished media library
+# (incl. a patient X-ray and licence-unknown stock), screenshots and crawl data.
+docs/source-audit/
+
+# Vercel CLI
+.vercel/

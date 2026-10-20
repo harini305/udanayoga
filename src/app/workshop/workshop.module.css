@@ -1,0 +1,36 @@
+.list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.item {
+  display: grid;
+  gap: 0.75rem 3rem;
+  padding: clamp(1.75rem, 1.25rem + 2vw, 2.75rem) 0;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+@media (min-width: 860px) {
+  .item {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+}
+
+.title {
+  font-size: clamp(1.4rem, 1.2rem + 0.9vw, 2rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.item p {
+  max-width: 38rem;
+}
+
+.listTitle {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+/* Interface text: logo-matched face */
+.listTitle {
+  font-family: var(--font-ui);
+}

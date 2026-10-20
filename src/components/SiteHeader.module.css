@@ -1,0 +1,385 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 250, 247, 0.96);
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@supports (backdrop-filter: blur(8px)) {
+  .header {
+    background: rgba(255, 250, 247, 0.88);
+    backdrop-filter: saturate(1.2) blur(10px);
+  }
+}
+
+.scrolled {
+  border-bottom-color: var(--line);
+  box-shadow: 0 6px 24px -18px rgba(74, 43, 30, 0.45);
+}
+
+.bar {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex: none;
+  border-radius: 4px;
+}
+
+.logo {
+  width: auto;
+  height: 46px;
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    height: 52px;
+  }
+}
+
+/* ---------- Desktop navigation ---------- */
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.7rem;
+  color: var(--ink);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hasSub .link {
+  padding-right: 0.15rem;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  bottom: 6px;
+  height: 2px;
+  background: var(--coral);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+
+.hasSub .link::after {
+  right: 0.15rem;
+}
+
+.link:hover {
+  color: var(--brown);
+}
+
+.link:hover::after,
+.active::after {
+  transform: scaleX(1);
+}
+
+.active {
+  color: var(--brown);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.toggle svg {
+  transition: transform 0.25s var(--ease);
+}
+
+.open .toggle svg {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 15.5rem;
+  padding: 0.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 40px -22px rgba(74, 43, 30, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.25s var(--ease),
+    visibility 0s linear 0.25s;
+}
+
+/* Invisible bridge so hover is not lost between link and panel */
+.submenu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 10px;
+}
+
+@media (hover: hover) {
+  .hasSub:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition:
+      opacity 0.2s ease,
+      transform 0.25s var(--ease),
+      visibility 0s;
+  }
+}
+
+.open .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.25s var(--ease),
+    visibility 0s;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.6rem 0.85rem;
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: var(--fs-small);
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.submenu a:hover {
+  background: var(--blush);
+  color: var(--brown);
+}
+
+.submenu a[aria-current='page'] {
+  color: var(--orange-text);
+  font-weight: 600;
+}
+
+/* ---------- Actions ---------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .actions {
+    margin-left: 0.75rem;
+  }
+}
+
+.cta {
+  min-height: 42px;
+  padding: 0.5rem 1.2rem;
+}
+
+@media (max-width: 479px) {
+  .cta {
+    display: none;
+  }
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0 0.9rem;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--brown);
+  font: 600 var(--fs-small) / 1 var(--font-ui);
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  border-color: var(--brown);
+}
+
+@media (min-width: 1024px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.burger {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 10px;
+}
+
+.burger span {
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 1.6px;
+  background: currentColor;
+  transition: transform 0.3s var(--ease), top 0.3s var(--ease);
+}
+
+.burger span:first-child {
+  top: 0;
+}
+
+.burger span:last-child {
+  top: 8px;
+}
+
+.menuButton[aria-expanded='true'] .burger span:first-child {
+  top: 4px;
+  transform: rotate(45deg);
+}
+
+.menuButton[aria-expanded='true'] .burger span:last-child {
+  top: 4px;
+  transform: rotate(-45deg);
+}
+
+/* ---------- Mobile panel ---------- */
+.panel {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  height: calc(100dvh - var(--header-h));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  padding: 1.25rem 0 2.5rem;
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .panel {
+    display: none !important;
+  }
+}
+
+.mobileGroups {
+  list-style: none;
+  display: grid;
+  gap: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .mobileGroups {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+  }
+}
+
+.mobileGroups ul {
+  list-style: none;
+  margin-bottom: 0.75rem;
+}
+
+.groupLabel {
+  margin: 0.9rem 0 0.25rem;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.mobileGroups a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.0625rem;
+}
+
+.mobileGroups a.mobileTop {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+.mobileGroups a[aria-current='page'] {
+  color: var(--orange-text);
+  font-weight: 600;
+}
+
+/* After a click, keep the dropdown closed until the pointer leaves the item */
+.hasSub.suppressed:hover .submenu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+}
+
+/* Interface text: logo-matched face */
+.link,
+.submenu a,
+.mobileGroups a,
+.groupLabel {
+  font-family: var(--font-ui);
+}

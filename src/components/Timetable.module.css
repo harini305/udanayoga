@@ -1,0 +1,175 @@
+.wrap {
+  max-width: 100%;
+}
+
+/* ---------- Week grid ---------- */
+.week {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .week {
+    display: block;
+  }
+  .dayView {
+    display: none;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  table-layout: fixed;
+  font-size: var(--fs-xs);
+  line-height: 1.35;
+  margin-inline: -4px;
+}
+
+.table thead th {
+  padding: 0.4rem 0.5rem 0.6rem;
+  text-align: left;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--brown);
+  letter-spacing: 0.02em;
+}
+
+.table thead th:first-child {
+  width: 5.25rem;
+}
+
+.table tbody th {
+  padding: 0.75rem 0.5rem 0.75rem 0;
+  text-align: left;
+  vertical-align: top;
+  font-weight: 600;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.table td {
+  vertical-align: top;
+  border-radius: 6px;
+  padding: 0.7rem 0.7rem 0.75rem;
+}
+
+.filled {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: inset 3px 0 0 var(--coral);
+}
+
+.blank {
+  background: transparent;
+  border: 1px dashed var(--line);
+}
+
+.cls {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.875rem;
+}
+
+.teacher {
+  display: block;
+  color: var(--ink-soft);
+  margin-top: 0.15rem;
+}
+
+.confirm {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--orange-text);
+  font-weight: 600;
+}
+
+@media (min-width: 760px) and (max-width: 1023px) {
+  .table thead th:first-child {
+    width: 4.5rem;
+  }
+  .table td {
+    padding: 0.55rem 0.5rem;
+  }
+  .cls {
+    font-size: 0.8125rem;
+  }
+}
+
+/* ---------- Day view ---------- */
+.dayTabs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.dayTab {
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font: 600 var(--fs-small) / 1 var(--font-ui);
+  cursor: pointer;
+}
+
+.dayTab[aria-selected='true'] {
+  background: var(--brown);
+  color: var(--on-dark);
+}
+
+.dayPanel {
+  margin-top: 1.25rem;
+}
+
+.dayTitle {
+  font-size: var(--fs-h3);
+  margin-bottom: 0.5rem;
+}
+
+.dayList {
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.dayList li {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-small);
+}
+
+.time {
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.detail .cls {
+  font-size: var(--fs-small);
+}
+
+.footnote {
+  margin-top: 1rem;
+  font-size: var(--fs-xs);
+  color: var(--ink-soft);
+}
+
+/* Interface text: logo-matched face */
+.table thead th,
+.table tbody th,
+.cls,
+.teacher,
+.confirm,
+.time,
+.footnote {
+  font-family: var(--font-ui);
+}

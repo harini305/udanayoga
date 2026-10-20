@@ -1,0 +1,5 @@
+.goals {
+  margin-top: 1rem;
+  font-size: var(--fs-lead);
+  gap: 0.85rem;
+}

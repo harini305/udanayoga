@@ -1,0 +1,108 @@
+.aside {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 880px) {
+  .aside {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+    padding-top: 4.5rem;
+  }
+}
+
+.badges {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.sutra {
+  padding-block: clamp(2.25rem, 1.75rem + 2vw, 3.5rem);
+  background: var(--blush);
+  text-align: center;
+}
+
+.sanskrit {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 1.4rem + 2vw, 3.1rem);
+  line-height: 1.15;
+  color: var(--brown);
+  margin-bottom: 0.4rem;
+}
+
+.translation {
+  font-size: var(--fs-lead);
+  color: var(--ink-soft);
+}
+
+.team {
+  display: grid;
+  gap: clamp(3rem, 2rem + 3vw, 4.5rem);
+}
+
+@media (min-width: 1100px) {
+  .team {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.person {
+  display: grid;
+  gap: 1.5rem;
+  align-content: start;
+  font-size: var(--fs-small);
+}
+
+@media (min-width: 640px) {
+  .person {
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .person {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portrait {
+  max-width: 260px;
+}
+
+.name {
+  margin-bottom: 0.1em;
+  font-size: clamp(1.4rem, 1.25rem + 0.6vw, 1.75rem);
+}
+
+.role {
+  font-weight: 600;
+  color: var(--orange-text);
+  margin-bottom: 1rem;
+}
+
+.creds {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+}
+
+.creds li {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--brown);
+}
+
+/* Interface text: logo-matched face */
+.role,
+.creds li {
+  font-family: var(--font-ui);
+}
